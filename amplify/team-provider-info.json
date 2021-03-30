@@ -1,0 +1,25 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-obdbgraphql-dev-214335-authRole",
+            "UnauthRoleArn": "arn:aws:iam::070854643340:role/amplify-obdbgraphql-dev-214335-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::070854643340:role/amplify-obdbgraphql-dev-214335-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-obdbgraphql-dev-214335-deployment",
+            "UnauthRoleName": "amplify-obdbgraphql-dev-214335-unauthRole",
+            "StackName": "amplify-obdbgraphql-dev-214335",
+            "StackId": "arn:aws:cloudformation:us-east-1:070854643340:stack/amplify-obdbgraphql-dev-214335/590b2090-90f9-11eb-9416-1230a5204572",
+            "AmplifyAppId": "d30nux798m6heq"
+        },
+        "categories": {
+            "api": {
+                "obdbgraphql": {
+                    "rdsRegion": "us-east-1",
+                    "rdsClusterIdentifier": "arn:aws:rds:us-east-1:070854643340:cluster:obdb-serverless-cluster",
+                    "rdsSecretStoreArn": "arn:aws:secretsmanager:us-east-1:070854643340:secret:rds-db-credentials/cluster-PN37WJPMWGF3D5CFPSBUHPXTLA/admin-QsCUFk",
+                    "rdsDatabaseName": "breweries"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+input CreateBreweriesInput {
+  id: Int!
+  name: String!
+  brewery_type: String
+  street: String
+  city: String
+  state: String
+  postal_code: String
+  website_url: String
+  phone: String
+  created_at: AWSTimestamp!
+  updated_at: AWSTimestamp!
+  country: String
+  longitude: Float
+  latitude: Float
+  address_2: String
+  address_3: String
+  county_province: String
+}
+
+type breweries {
+  id: Int!
+  name: String!
+  brewery_type: String
+  street: String
+  city: String
+  state: String
+  postal_code: String
+  website_url: String
+  phone: String
+  created_at: AWSTimestamp!
+  updated_at: AWSTimestamp!
+  country: String
+  longitude: Float
+  latitude: Float
+  address_2: String
+  address_3: String
+  county_province: String
+}
+
+input UpdateBreweriesInput {
+  id: Int!
+  name: String
+  brewery_type: String
+  street: String
+  city: String
+  state: String
+  postal_code: String
+  website_url: String
+  phone: String
+  created_at: AWSTimestamp
+  updated_at: AWSTimestamp
+  country: String
+  longitude: Float
+  latitude: Float
+  address_2: String
+  address_3: String
+  county_province: String
+}
+
+type Mutation {
+  deleteBreweries(id: Int!): breweries
+  createBreweries(createBreweriesInput: CreateBreweriesInput!): breweries
+  updateBreweries(updateBreweriesInput: UpdateBreweriesInput!): breweries
+}
+
+type Query {
+  getBreweries(id: Int!): breweries
+  listBreweriess: [breweries]
+}
+
+type Subscription {
+  onCreateBreweries: breweries @aws_subscribe(mutations: ["createBreweries"])
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
